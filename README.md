@@ -157,4 +157,4 @@ ExpertLens started as a personal tool for getting genuinely expert-level output 
 
 ---
 
-*ExpertLens v2 — Platform-agnostic AI thinking framework*
+*ExpertLens — Platform-agnostic AI thinking framework*
