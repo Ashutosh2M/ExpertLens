@@ -155,6 +155,8 @@ Built by Ashutosh Merwade.
 
 ExpertLens started as a personal tool for getting genuinely expert-level output from AI — not just faster output. The core insight: the problem isn't AI capability, it's AI thinking structure. Give AI the right thinking framework and the output transforms.
 
+GitHub Repo link: [https://github.com/Ashutosh2M/ExpertLens](https://github.com/Ashutosh2M/ExpertLens)
+
 ---
 
 *ExpertLens — Platform-agnostic AI thinking framework*
