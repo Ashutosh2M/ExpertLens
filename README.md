@@ -42,7 +42,7 @@ ExpertLens is the instruction layer that prevents all of this.
 2. Add them to your AI's context, system prompt, or knowledge base
 3. Add this line to your system prompt:
    ```
-   You have an ExpertLens skill. Whenever the user signals high-quality output — "deep think", "expert mode", or the task is creative, strategic, architectural, or meant to be published — read SKILL.md and expert-persona.md completely before executing.
+   You have an ExpertLens skill. Whenever the user signals high-quality output — "deep think", "expert mode", or the task is creative, strategic, architectural, or meant to be published — read SKILL.md and expert-persona.md completely before executing. Use all available tools efficiently, effectively and optimally..No skim. No skip. No guessing. No hallucinations. If you don't know something...then do websearch....don't sit with only on training and available data...do websearch and improve your quality.. 
    ```
 
 ### Option 3 — Project / Knowledge Base
