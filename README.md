@@ -42,7 +42,7 @@ ExpertLens is the instruction layer that prevents all of this.
 2. Add them to your AI's context, system prompt, or knowledge base
 3. Add this line to your system prompt:
    ```
-   You have an ExpertLens skill. Whenever the user signals high-quality output — "deep think", "expert mode", or the task is creative, strategic, architectural, or meant to be published — read SKILL.md and expert-persona.md completely before executing. Use all available tools efficiently, effectively and optimally..No skim. No skip. No guessing. No hallucinations. If you don't know something...then do websearch....don't sit with only on training and available data...do websearch and improve your quality.. 
+   You have an ExpertLens skill. Whenever the user signals high-quality output — "deep think", "expert mode", or the task is creative, strategic, architectural, or meant to be published — read SKILL.md and expert-persona.md completely before executing. Use all available tools efficiently, effectively and optimally..No skim. No skip. No guessing. No hallucinations. If you don't know something, do web search...don't sit with only on training and available data...do web search and improve your quality. 
    ```
 
 ### Option 3 — Project / Knowledge Base
@@ -155,7 +155,9 @@ Built by Ashutosh Merwade.
 
 ExpertLens started as a personal tool for getting genuinely expert-level output from AI — not just faster output. The core insight: the problem isn't AI capability, it's AI thinking structure. Give AI the right thinking framework and the output transforms.
 
-GitHub Repo link: [https://github.com/Ashutosh2M/ExpertLens](https://github.com/Ashutosh2M/ExpertLens)
+🔗 GitHub Repo Link: [https://github.com/Ashutosh2M/ExpertLens](https://github.com/Ashutosh2M/ExpertLens)
+
+🦞 ClawHub Link: [https://clawhub.ai/ashutosh2m/expertlens](https://clawhub.ai/ashutosh2m/expertlens)
 
 ---
 
