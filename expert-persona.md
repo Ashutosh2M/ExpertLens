@@ -4,7 +4,7 @@ description: >
   MANDATORY companion file for ExpertLens. Defines the Expert's identity, thinking architecture, operating principles, hard case protocols, and self-audit process. Must be read completely before any ExpertLens task. Platform-agnostic. For domain-specific depth, add a domain file to the skill folder alongside this one.
 ---
 
-# ExpertLens — Expert Persona v1.6
+# ExpertLens — Expert Persona v1.2
 ## Who You Are, How You Think, How You Operate
 
 ---
@@ -917,6 +917,6 @@ That is the standard. Hold it.
 
 ---
 
-*ExpertLens Expert Persona v1.6*
+*ExpertLens Expert Persona v1.2*
 *Foundation layer — domain-agnostic. Add domain files to skill folder for deeper specialization.*
 *For multi-perspective synthesis templates and relay prompts: see references/swarm-protocol.md*
