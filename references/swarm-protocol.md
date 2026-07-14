@@ -3,12 +3,7 @@
 Templates, patterns, and synthesis guidelines for Multi-LLM Swarm Mode.
 Read this when executing Phase 5 of ExpertLens.
 
-For the synthesis protocol (the 5-step process: read without judgment → map contributions →
-make decisions → produce output → attribute transparently) and the disagreement taxonomy:
-expert-persona.md Section 7 is the authoritative reference. Follow those 5 steps when
-synthesizing. This file provides the relay prompt templates, model-specific tips, and
-the post-synthesis session retention questions (what to hold in memory after synthesis
-completes — distinct from the synthesis steps themselves).
+For the synthesis protocol (the 5-step process: read without judgment → map contributions → make decisions → produce output → attribute transparently) and the disagreement taxonomy: `expert-persona.md` Section 7 is the authoritative reference. Follow those 5 steps when synthesizing. This file provides the relay prompt templates, model-specific tips, and the post-synthesis session retention questions (what to hold in memory after synthesis completes — distinct from the synthesis steps themselves).
 
 ---
 
@@ -27,13 +22,10 @@ In Autonomous Mode:
 - Access the other platforms directly. No relay prompts needed.
 - Still follow the same model routing logic from SKILL.md.
 - **Read reasoning, not just output.** If the other AI's thinking chain is visible — read it
-  and evaluate quality. Poor reasoning that produces a correct-looking answer is still poor
-  reasoning. Probe with follow-up questions if needed.
+  and evaluate quality. Poor reasoning that produces a correct-looking answer is still poor reasoning. Probe with follow-up questions if needed.
 - If a platform is consistently low quality for this task type → switch to a better one.
-  Do a quick web search (Reddit, X, AI communities) to find what real users say about
-  which model handles this type of task best.
-- Apply the synthesis protocol from expert-persona.md Section 7.2 regardless of how you
-  gathered the perspectives.
+  Do a quick web search (Reddit, X, AI communities) to find what real users say about which model handles this type of task best.
+- Apply the synthesis protocol from expert-persona.md Section 7.2 regardless of how you gathered the perspectives.
 
 ---
 
@@ -51,8 +43,7 @@ The other model has zero context about your conversation. Assume nothing.
 [Clear, specific description of the task or problem]
 
 ## My current approach / draft
-[Share your current output or direction — optional but often more valuable
- than an open-ended request. Reaction to something concrete produces better output.]
+[Share your current output or direction — optional but often more valuable than an open-ended request. Reaction to something concrete produces better output.]
 
 ## What I need from you specifically
 Choose one clear angle:
@@ -102,13 +93,9 @@ Model C → Addresses different gap or reacts to B's perspective
 You → Final synthesis of all three
 ```
 
-Best for: Creative work where direction needs to evolve, strategy that needs iteration,
-tasks where one perspective naturally informs the next.
+Best for: Creative work where direction needs to evolve, strategy that needs iteration, tasks where one perspective naturally informs the next.
 
-Note: In serial chains, Model C is reacting to B's perspective, not independently
-evaluating your original. This is iterative refinement — useful when you want perspectives
-to build on each other and evolve toward something better. Use parallel when you want
-genuinely independent views without cross-influence between models.
+Note: In serial chains, Model C is reacting to B's perspective, not independently evaluating your original. This is iterative refinement — useful when you want perspectives to build on each other and evolve toward something better. Use parallel when you want genuinely independent views without cross-influence between models.
 
 **Relay prompt for Model C in serial:**
 > "You're the third perspective in a collaborative process.
@@ -143,31 +130,25 @@ See also expert-persona.md Section 7.3 for the full framework.
 
 **Type 1 — Different assumptions about context (different priors):**
 They're applying different assumptions about what the situation is.
-Resolution: Identify which assumption applies to this specific case. The disagreement
-resolves when the right assumption is identified. Ask: "Which of these assumptions
-actually describes the user's situation?"
+Resolution: Identify which assumption applies to this specific case. The disagreement resolves when the right assumption is identified. Ask: "Which of these assumptions actually describes the user's situation?"
 
 **Type 2 — Different weighting of same evidence (different risk tolerance):**
 They have the same facts but value different outcomes differently.
-Resolution: Make the weighting difference explicit. Ask the user which weighting applies
-to their values and situation. This is often a legitimate values question, not an
-analytical error by either party.
+Resolution: Make the weighting difference explicit. Ask the user which weighting applies to their values and situation. This is often a legitimate values question, not an analytical error by either party.
 
 **Type 3 — Different mental models of mechanism (structurally different theories):**
 They genuinely disagree about how something works.
-Resolution: Identify what evidence would discriminate between the models. This is a
-genuine empirical disagreement — present both views, then give your read on which the
-available evidence better supports, and why.
+Resolution: Identify what evidence would discriminate between the models. This is a genuine empirical disagreement — present both views, then give your read on which the available evidence better supports, and why.
 
 **Type 4 — Different information (one has access to data the other doesn't):**
 One source knows something the other doesn't.
-Resolution: Share the information gap. Once both perspectives have the same information,
-re-evaluate. Sometimes "disagreement" dissolves when you realize they were answering
-different versions of the question.
+Resolution: Share the information gap. Once both perspectives have the same information, re-evaluate. Sometimes "disagreement" dissolves when you realize they were answering different versions of the question.
 
 **When sources agree on surface but disagree on mechanism:**
 That is the real disagreement. Surface it. The mechanism question is what needs resolving.
 Don't stop at "both say X" — ask why each says X and whether the whys are compatible.
+
+**Causal verification before integration:** Before accepting any element from a peer model's output into your synthesis, independently verify that its conclusion actually derives from valid premises — not just that the reasoning appears authoritative or fluent. For each element you're considering integrating: can you reconstruct the logical steps that produce it? If a step is missing, unverified, or relies on an assumption you cannot independently confirm — exclude that specific conclusion from the synthesis. Fluent-sounding reasoning from another model is not the same as correctly-derived reasoning. Error propagation in multi-agent synthesis happens when the synthesizer confuses coherence with validity. Quarantine unverified conclusions; do not average them in at reduced weight.
 
 ---
 
@@ -201,10 +182,8 @@ For research: ask for sources and how well-established each claim is.
 
 **When prompting Grok:**
 Grok searches web aggressively by default — useful for current data and live events.
-Frame as: "Be brutally honest" or "Argue against this" or "What's wrong here" if you want
-unfiltered pushback. It will push back hard.
-Filter its output carefully — it can mirror your framing or go too contrarian. Look for the
-genuine insight in the middle of the provocation.
+Frame as: "Be brutally honest" or "Argue against this" or "What's wrong here" if you want unfiltered pushback. It will push back hard.
+Filter its output carefully — it can mirror your framing or go too contrarian. Look for the genuine insight in the middle of the provocation.
 
 **When prompting Gemini:**
 Best for comprehensive research — ask for detailed reports on specific topics.
